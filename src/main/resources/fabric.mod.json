@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "bedrock-breath",
+	"version": "${version}",
+	"name": "Bedrock Breath",
+	"description": "Right click with Dragon's Breath to change Bedrock into Obsidian or Crying Obsidian",
+	"authors": [
+		"edermats32"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/bedrock-breath/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.edermats.bedrockbreath.EderBedrockBreath"
+		],
+		"client": [
+			"dev.edermats.bedrockbreath.client.BedrockBreathClient"
+		]
+	},
+	"mixins": [
+		"bedrock-breath.mixins.json",
+		{
+			"config": "bedrock-breath.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
